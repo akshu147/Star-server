@@ -1,0 +1,11 @@
+const express = require("express")
+const { addsize, updatesize, getsize, deletesize, deletemultiple } = require("../../controlers/controlers")
+const { showsize } = require("../../controlers/size/showsize")
+const sizeroutes = express.Router()
+sizeroutes.post("/add-size", addsize)
+sizeroutes.get("/show-size", showsize)
+sizeroutes.put("/update-size/:_id", updatesize)
+sizeroutes.get("/get-size/:_id", getsize)
+sizeroutes.delete("/deletesize-one/:_id", deletesize)
+sizeroutes.delete("/delete-allsize", deletemultiple)
+module.exports = {sizeroutes}
