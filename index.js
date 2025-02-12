@@ -10,9 +10,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 app.use("/api", allroutes)
-
-
-// app.post("/login-admin", ragisteradmin)
+app.use("/uploads", express.static(path.join(__dirname, "src","uploads")));
 
 app.listen(process.env.PORT, ()=> {
     console.log(`Listernig on port number ${process.env.PORT}`)

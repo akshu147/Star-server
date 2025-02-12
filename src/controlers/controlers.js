@@ -1,5 +1,10 @@
 const { addcolor } = require('./addcolor/addcolor')
 const { loginadmin, AdminLogin } = require('./admin/login')
+const {
+  addcategory,
+  deletecategoryone,
+  updatecategory
+} = require('./category/category')
 const { updateprofile } = require('./profile/profile')
 const { addsize } = require('./size/addsize')
 const { deletesize, deletemultiple } = require('./size/deletesize')
@@ -19,6 +24,9 @@ module.exports = {
   updatesize,
   getsize,
   deletesize,
-  deletemultiple
-
+  deletemultiple,
+  //category
+  addcategory,
+  deletecategoryone,
+  updatecategory
 }
