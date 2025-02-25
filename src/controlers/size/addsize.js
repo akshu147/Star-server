@@ -13,6 +13,7 @@ const addsize = async (req, res) => {
             return res.status(400).json({ message: "Size already exists!", errorCode: 11000 });
         }
         res.status(500).json({ message: "Internal server error", error: err.message });
+        console.log(err.message)
     }
 };
 

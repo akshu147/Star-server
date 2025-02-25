@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 
 const updateProfileSchema = new mongoose.Schema({
-    userId: {
-        type: mongoose.Schema.Types.ObjectId, // Reference to User (if applicable)
+    userid: {
+        type:String,
         required: true,
         ref: "User" // If you have a separate User model
     },
@@ -24,7 +24,8 @@ const updateProfileSchema = new mongoose.Schema({
     },
     password: {
         type: String,
-    }
+    },
+
 }, { timestamps: true }); // Adds createdAt and updatedAt automatically
 
 const updateProfileModel = mongoose.model("UpdateProfile", updateProfileSchema);

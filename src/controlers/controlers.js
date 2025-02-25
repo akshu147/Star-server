@@ -5,10 +5,12 @@ const {
   deletecategoryone,
   updatecategory
 } = require('./category/category')
+const { addproductcat, showproductcat, deleteProcutCatOne, deleteallproductcat, getproductcat, Updadateproductcat } = require('./productcat/productcat')
 const { updateprofile } = require('./profile/profile')
 const { addsize } = require('./size/addsize')
 const { deletesize, deletemultiple } = require('./size/deletesize')
 const { updatesize, getsize } = require('./size/updatesize')
+const { addslider, deletemultipleslider, showslider, deletesliderone, getslider } = require('./slider/slider')
 
 // for admin
 module.exports = {
@@ -28,5 +30,19 @@ module.exports = {
   //category
   addcategory,
   deletecategoryone,
-  updatecategory
+  updatecategory,
+  //slider
+  addslider,
+  deletemultipleslider,
+  showslider,
+  deletesliderone,
+  getslider,
+  //product category
+  addproductcat,
+  showproductcat,
+  deleteProcutCatOne,
+  deleteallproductcat,
+  getproductcat,
+  Updadateproductcat
+
 }
